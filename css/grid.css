@@ -1,0 +1,56 @@
+/****** Exemplo Grid 1 ******/
+.div-links-ref > ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.div-links-ref > ul > li {
+  list-style: none;
+  padding: 1rem;
+  margin: .25rem;
+  color: white;
+  background-color: slateblue;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  grid-gap: 20px;
+  margin: 0 auto; /*Centraliza a div*/
+}
+
+.grid-1 > div:nth-child(n + 4) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+}
+
+.grid-1 > div.cidade {
+  grid-row: 2 / 5; /*Vai da linha 2 até a 5*/
+  grid-column: 1;
+  display: block;
+}
+
+img {
+  max-width: 100%; /* */
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .grid-1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-1 > div:nth-child(n + 4) {
+    display: block;
+  }
+
+  .grid-1 > div.cidade {
+    grid-row: auto;
+    grid-column: auto;
+  }
+}

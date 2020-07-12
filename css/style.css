@@ -1,0 +1,39 @@
+html,
+body,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo Da 2", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+  background-color: #1e1e26;
+  height: 3rem;
+  padding: 0.6rem;
+}
+
+.navbar > ul > li {
+  list-style: none;
+  padding: 0 10px 0 10px;
+}
+
+.menu-navbar {
+  display: flex;
+}
+
+h1 {
+  margin-top: 2rem;
+  text-align: center;
+}

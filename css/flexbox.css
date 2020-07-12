@@ -1,0 +1,19 @@
+/****** Exemplo Flex 1 ******/
+
+.flex-1 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto; /*Centraliza a div*/
+  }
+  
+  .flex-1 > div {
+    margin: 1rem;
+    flex: 1 1 250px; /* flex-shrink, flex-grow, flex-basis*/
+  }
+  
+  img {
+    max-width: 100%; /* */
+    display: block;
+  }
+  
