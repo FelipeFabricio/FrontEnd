@@ -1,19 +1,39 @@
 /****** Exemplo Flex 1 ******/
+.div-links-ref > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.div-links-ref > ul > li {
+  list-style: none;
+  padding: 1rem;
+  margin: 0.25rem;
+  color: white;
+  background-color: slateblue;
+  font-size: 0.9rem;
+  text-align: center;
+}
 
 .flex-1 {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto; /*Centraliza a div*/
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto; /*Centraliza a div*/
+}
+
+.flex-1 > div {
+  margin: 1rem;
+  flex: 1 1 250px; /* flex-shrink, flex-grow, flex-basis*/
+}
+
+img {
+  max-width: 100%; /* */
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .div-links-ref > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .flex-1 > div {
-    margin: 1rem;
-    flex: 1 1 250px; /* flex-shrink, flex-grow, flex-basis*/
-  }
-  
-  img {
-    max-width: 100%; /* */
-    display: block;
-  }
-  
+}

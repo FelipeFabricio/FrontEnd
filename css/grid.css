@@ -1,16 +1,16 @@
-/****** Exemplo Grid 1 ******/
-.div-links-ref > ul{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+/**************** Exemplo Grid 1 *****************/
+.div-links-ref > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .div-links-ref > ul > li {
   list-style: none;
   padding: 1rem;
-  margin: .25rem;
+  margin: 0.25rem;
   color: white;
   background-color: slateblue;
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 
@@ -20,6 +20,7 @@
   max-width: 1000px;
   grid-gap: 20px;
   margin: 0 auto; /*Centraliza a div*/
+  margin-bottom: 5rem;
 }
 
 .grid-1 > div:nth-child(n + 4) {
@@ -29,7 +30,7 @@
   align-items: center;
 }
 
-.grid-1 > div.cidade {
+.grid-1 > div.gri-1-item {
   grid-row: 2 / 5; /*Vai da linha 2 até a 5*/
   grid-column: 1;
   display: block;
@@ -49,8 +50,44 @@ img {
     display: block;
   }
 
-  .grid-1 > div.cidade {
+  .grid-1 > div.gri-1-item {
     grid-row: auto;
     grid-column: auto;
+  }
+
+  /* Menu de referências*/
+  .div-links-ref > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/**************** Exemplo Grid 2 *****************/
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  grid-gap: 20px;
+}
+
+.grid-2-lateral > div {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2-lateral {
+    display: flex;
+    overflow: scroll;
+  }
+
+  .grid-2-lateral > div {
+    flex: 1 0 200px;
+    margin: 0 10px;
   }
 }
